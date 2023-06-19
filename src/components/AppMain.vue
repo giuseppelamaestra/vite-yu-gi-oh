@@ -1,7 +1,13 @@
 <template>
-    <h1>
+
+    <main>
+        <h1>
         Main
-    </h1>
+       </h1>
+    </main>
+  
 </template>
 <script></script>
-<style></style>
+<style lang="scss">
+@import 'bootstrap/scss/bootstrap'
+</style>
