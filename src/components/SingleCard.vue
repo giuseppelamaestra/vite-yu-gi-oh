@@ -1,7 +1,9 @@
 <template>
-    <h1>
-        Main
-    </h1>
+    <h2>
+        Single Card
+    </h2>
 </template>
+
 <script></script>
+
 <style></style>
