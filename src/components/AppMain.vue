@@ -1,13 +1,15 @@
 <template>
 
     <main>
-        <h1>
-        Main
-       </h1>
+        <div>
+           <SingleCard/>
+        </div>
     </main>
   
 </template>
-<script></script>
+<script>
+ import SingleCard from './SingleCard.vue'
+</script>
 <style lang="scss">
 @import 'bootstrap/scss/bootstrap'
 </style>
