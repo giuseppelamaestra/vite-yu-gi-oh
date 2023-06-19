@@ -6,3 +6,10 @@ header {
     padding: 2rem;
 }
 
+.card {
+    width: calc(100% / 5);
+}
+
+.container-card {
+    display: flex;
+}
