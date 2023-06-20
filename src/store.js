@@ -5,4 +5,4 @@ const store = reactive ({
 
 })
 
-export { store }
+export default store

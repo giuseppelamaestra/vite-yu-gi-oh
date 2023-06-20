@@ -1,17 +1,13 @@
 <template>
 
     <main>
-        <div class="container">
-           <div class="container-card">
-            <SingleCard/>
-           </div>
-        </div>
+       <CardsList/>
     </main>
   
 </template>
 <script>
- import SingleCard from './SingleCard.vue'
- import axios from 'axios'
+ import CardsList from './CardsList.vue'
+ 
 
  export default {
     name: 'AppMain',
@@ -22,28 +18,10 @@
      }, 
 
      components: {
-        SingleCard
+        CardsList
      },
 
-     created () {
-        const axios = require('axios');
-
-      // Make a request for a user with a given ID
-       axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
-       .then(function (response) {
-       // handle success
-       console.log(response);
-       })
-      .catch(function (error) {
-        // handle error
-       console.log(error);
-       })
-       .finally(function () {
-         // always executed
-         });
-
-     }
-
+     
 
         
  }
