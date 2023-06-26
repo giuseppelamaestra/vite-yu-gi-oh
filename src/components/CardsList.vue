@@ -1,5 +1,7 @@
 <template>
-    <SingleCard/>
+    <div class="flex flex-wrap">
+    <SingleCard v-for="card in CardsList" :cardName="card.name" :cardImg="card.card_images[0].image_url" :cardArchetype="card.archetype"/>
+    </div>
 </template>
 <script>
 import SingleCard from './SingleCard.vue';
@@ -23,12 +25,10 @@ export default {
         axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
 
         .then((response) => {
-            console.log(response.data.results);
+            this.CardsList = response.data.data;
 
         })
-        .catch(function (error){
-            console.log(error)
-    })
+      
 
         
     }
