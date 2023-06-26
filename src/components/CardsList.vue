@@ -1,5 +1,5 @@
 <template>
-  
+    <SingleCard/>
 </template>
 <script>
 import SingleCard from './SingleCard.vue';
