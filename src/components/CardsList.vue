@@ -10,29 +10,36 @@ import { store } from '../store.js';
 
 export default {
     name: 'CardsList',
-    data(){
-        return {
-            CardsList : [],
-            store
-        }
-
-    },
-    components:{
+    components: {
         SingleCard,
     },
-
+    data(){
+        return{
+            apiUrl:'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0', 
+            cardsList : [],
+        }
+    },
+   
+    
     created(){
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
-
-        .then((response) => {
-            this.CardsList = response.data.data;
-
+        axios.get(this.apiUrl)
+        .then( (response) => {
+           
+            console.log(response.data.data[0].card_images);
+            this.cardsList = response.data.data;
         })
-      
-
-        
-    }
+        .catch(function (error) {
+            
+            console.log(error);
+        });
+    },
+    data () {
+        return {
+            store
+        }
+    },
 }
+              
 </script>
 <style lang="scss">
 
