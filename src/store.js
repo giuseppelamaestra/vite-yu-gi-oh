@@ -1,7 +1,9 @@
-import {reactive} from 'vue'
 
-export const store = reactive ({
+import { reactive } from 'vue';
 
-
+const store = reactive({
+    listApi: '',
 })
+
+export { store }
 

@@ -6,13 +6,14 @@
               {{ name }}
           </h5>
          <p class="card-text">
-           {{ desc }}
+           {{ type }}
          </p>
-           <p class="card-text">
-              <small class="text-muted">
-                 Last updated 3 mins ago
-              </small>
-            </p>
+         <div class="my-cards-element">
+        <img :src="SingleCard.card_images[0].image_url" :alt="SingleCard.name + 'Image'">
+        <h3>{{ SingleCard.name }}</h3>
+        <span>{{ SingleCard.archetype }}</span>
+    </div>
+            
 
       </div>
  </div>
@@ -33,6 +34,7 @@ export default {
         name : String,
         desc : String,
         image: String,
+        singleCard: Object,
     }
 }
 
@@ -40,6 +42,10 @@ export default {
 
 <style lang="scss">
 
-@import 'bootstrap/scss/bootstrap'
+
+
+.my-cards-element{
+  width: calc(100% / 5);
+}
 
 </style>
